@@ -1,8 +1,273 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container mt-5">
-    <h1>Welcome to BookMyTable</h1>
-    <p>Your favorite restaurant booking system.</p>
+
+
+<!-- Hero -->
+<div class="container col-xxl-8 px-4 py-5 shadow">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://placehold.co/700x500" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Reserve Your Table at BookMyTable
+            </h1>
+            <p class="lead">Discover a delightful dining experience at BookMyTable. Book your table
+                seamlessly with our easy-to-use platform. Enjoy exquisite dishes, impeccable service, and create
+                memorable moments.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-outline-danger btn-lg px-4">Book your table now</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+<hr class="my-5 border-top border-secondary">
+
+<!-- About us  -->
+<section class="bsb-service-7 py-5 py-xl-8" id="about_us">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                <h3 class="fs-5 mb-2 text-secondary text-center text-uppercase">About Us</h3>
+                <p class="text-secondary mb-5 text-center">We offer premier services where excellence meets
+                    affordability.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="container-fluid bg-light border shadow">
+                    <div class="row">
+                        <div class="col-12 col-md-4 p-0">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body text-center p-5">
+                                    <i class="fas fa-bookmark text-primary mb-4 fa-3x"></i>
+                                    <h4 class="fw-bold text-uppercase mb-4">Table Reservation</h4>
+                                    <p class="mb-4 text-secondary">Effortlessly reserve tables for your dining
+                                        experience, ensuring you have the perfect spot.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 p-0 border-top border-bottom border-start border-end">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body text-center p-5">
+                                    <i class="fas fa-calendar-check text-primary mb-4 fa-3x"></i>
+                                    <h4 class="fw-bold text-uppercase mb-4">Event Reservations</h4>
+                                    <p class="mb-4 text-secondary">Book special events or private dining experiences
+                                        for groups, celebrations, or business meetings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 p-0">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body text-center p-5">
+                                    <i class="fas fa-history text-primary mb-4 fa-3x"></i>
+                                    <h4 class="fw-bold text-uppercase mb-4">Order History</h4>
+                                    <p class="mb-4 text-secondary">Access your order history to view past
+                                        reservations, reorder favorite meals, and manage dining preferences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<hr class="my-5 border-top border-secondary">
+
+<!-- Menu -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Portfolio</h2>
+    <!-- Portfolio Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-4" id="portfolio-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="breakfast-tab" data-bs-toggle="pill" data-bs-target="#breakfast"
+                type="button" role="tab" aria-controls="breakfast" aria-selected="true">Breakfast</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="lunch-tab" data-bs-toggle="pill" data-bs-target="#lunch" type="button"
+                role="tab" aria-controls="lunch" aria-selected="false">Lunch</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="dinner-tab" data-bs-toggle="pill" data-bs-target="#dinner" type="button"
+                role="tab" aria-controls="dinner" aria-selected="false">Dinner</button>
+        </li>
+    </ul>
+    <!-- Portfolio Content -->
+    <div class="tab-content" id="portfolioContent">
+        <!-- Tab Pane: Breakfast -->
+        <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+                <!-- Placeholder cards for breakfast -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Breakfast Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Breakfast Item 1</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Breakfast Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Breakfast Item 2</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Breakfast Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Breakfast Item 3</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab Pane: Lunch -->
+        <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+                <!-- Placeholder cards for lunch -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lunch Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Lunch Item 1</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lunch Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Lunch Item 2</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lunch Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Lunch Item 3</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab Pane: Dinner -->
+        <div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+                <!-- Placeholder cards for dinner -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dinner Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Dinner Item 1</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dinner Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Dinner Item 2</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dinner Image">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="#">Dinner Item 3</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-danger btn-lg">See More Menu Items</a>
+    </div>
+</div>
+
+<hr class="my-5 border-top border-secondary">
+
+<!-- Contact -->
+<section class="bg-light py-3 py-md-5">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="mb-4 display-5 text-center">Contact</h2>
+                <p class="text-secondary mb-5 text-center">The best way to contact us is to use our contact form
+                    below.
+                    Please fill out all of the required fields and we will get back to you as soon as possible.</p>
+                <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+                <div class="bg-white border rounded shadow-sm overflow-hidden">
+
+                    <form action="#!">
+                        <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                            <div class="col-12">
+                                <label for="fullname" class="form-label">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value=""
+                                    required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="email" class="form-label">Email <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value=""
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-phone"></i>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="3"
+                                    required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 {% endblock content %}
