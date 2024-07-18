@@ -19,6 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pages.urls')), # include the pages URLs
-    path('menu/', include('menu.urls')),  # Placeholder until the menu app is created
+    path('', include('pages.urls')),  # Assuming 'pages' is your main app
+    path('menu/', include('menu.urls')),
 ]
