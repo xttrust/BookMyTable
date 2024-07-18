@@ -84,10 +84,10 @@
 <hr class="my-5 border-top border-secondary">
 
 <!-- Menu -->
-<div class="container py-5">
-    <h2 class="text-center mb-4">Portfolio</h2>
-    <!-- Portfolio Tabs -->
-    <ul class="nav nav-pills justify-content-center mb-4" id="portfolio-tabs" role="tablist">
+<div class="container py-5" id="menu">
+    <h2 class="text-center mb-4">Menu</h2>
+    <!-- Menu Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-4" id="menu-tabs" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="breakfast-tab" data-bs-toggle="pill" data-bs-target="#breakfast"
                 type="button" role="tab" aria-controls="breakfast" aria-selected="true">Breakfast</button>
@@ -101,8 +101,8 @@
                 role="tab" aria-controls="dinner" aria-selected="false">Dinner</button>
         </li>
     </ul>
-    <!-- Portfolio Content -->
-    <div class="tab-content" id="portfolioContent">
+    <!-- Menu Content -->
+    <div class="tab-content" id="menuContent">
         <!-- Tab Pane: Breakfast -->
         <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
             <div class="row row-cols-1 row-cols-md-3 g-3">
@@ -200,10 +200,34 @@
     </div>
 </div>
 
+<!-- Footer with Social Links -->
+<footer class="footer border-top">
+    <div class="container">
+        <div class="footer-content d-flex flex-wrap justify-content-between align-items-center py-2 my-2">
+            <div class="footer-left d-flex align-items-center col-md-6">
+                <a href="/" class="me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                    <img src="https://via.placeholder.com/80x40" alt="Placeholder Image" class="me-2">
+                </a>
+                <span class="mb-0 text-body-secondary">&copy; 2024 Made with love by Florin Pinta</span>
+            </div>
+
+            <ul class="footer-right list-unstyled d-flex col-md-4 justify-content-end mb-0">
+                <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-twitter" aria-label="Twitter"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://instagram.com" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-instagram" aria-label="Instagram"></i></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="https://facebook.com" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-facebook" aria-label="Facebook"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
 <hr class="my-5 border-top border-secondary">
 
 <!-- Contact -->
-<section class="bg-light py-3 py-md-5">
+<section class="bg-light py-3 py-md-5" id="contact">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
