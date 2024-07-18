@@ -27,7 +27,7 @@
 <body class="d-flex flex-column h-100 main-bg" id="home">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center">
+    <nav id="navbar-example" class="navbar navbar-expand-md navbar-dark bg-dark justify-content-center">
         <div class="container">
             <a href="/" class="navbar-brand d-flex w-50 me-auto">BookMyTable</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
@@ -36,31 +36,31 @@
             <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
                 <ul class="navbar-nav w-100 justify-content-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home" data-bs-toggle="tooltip" title="Go to Home">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#menu" data-bs-toggle="tooltip" title="View Menu">Menu</a>
+                        <a class="nav-link" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about_us" data-bs-toggle="tooltip" title="About Us">About us</a>
+                        <a class="nav-link" href="#about_us">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact" data-bs-toggle="tooltip" title="Contact Us">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav ms-auto w-100 justify-content-end">
                     <li class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle btn btn-link" type="button" id="navbarDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false" data-bs-tooltip="tooltip" title="Account Settings">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Account
-                        </button>
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><button class="dropdown-item btn btn-link" type="button">Profile</button></li>
-                            <li><button class="dropdown-item btn btn-link" type="button">Settings</button></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><button class="dropdown-item btn btn-link" type="button">Logout</button></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
