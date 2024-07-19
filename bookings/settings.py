@@ -30,9 +30,14 @@ STATICFILES_DIRS = [
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [".codeinstitute-ide.net", ".herokuapp.com"]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.herokuapp.com',
+    'https://*.codeinstitute-ide.net',
+]
 
 
 # Application definition
@@ -45,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages',
+    'table',
 ]
 
 MIDDLEWARE = [
