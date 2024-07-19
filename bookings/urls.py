@@ -16,10 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tables/', include('table.urls')), 
+    path('tables/', include('table.urls')),
     path('menu/', include('menu.urls')),
-    path('', include('pages.urls')), 
+    path('', include('pages.urls')),
 ]
+
+# Serve media files in development
+if settings.DEBUG:  # Only add this in development mode
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
