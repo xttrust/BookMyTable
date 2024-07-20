@@ -23,5 +23,3 @@ class AboutPageView(TemplateView):
 class MenuPageView(TemplateView):
     template_name = 'pages/menu.html'
 
-class ContactPageView(TemplateView):
-    template_name = 'pages/contact.html'
