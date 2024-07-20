@@ -2,8 +2,14 @@
 
 {% block content %}
 <div class="container py-5">
-    <h2 class="text-center mb-4">Reserve a Table</h2>
-    <p class="text-secondary mb-5 text-center">Fill out the form below to make a reservation.</p>
+    <h2 class="text-center mb-4">
+        {% if form.instance.pk %}
+            Edit Reservation
+        {% else %}
+            Reserve a Table
+        {% endif %}
+    </h2>
+    <p class="text-secondary mb-5 text-center">Fill out the form below to {% if form.instance.pk %}edit{% else %}make{% endif %} a reservation.</p>
 
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
@@ -27,8 +33,7 @@
             </div>
             {% endif %}
 
-
-            <form method="post" action="{% url 'reservations:reserve_table' %}" class="bg-light p-4 rounded shadow-sm">
+            <form method="post" action="{% if form.instance.pk %}{% url 'reservations:edit_reservation' form.instance.pk %}{% else %}{% url 'reservations:reserve_table' %}{% endif %}" class="bg-light p-4 rounded shadow-sm">
                 {% csrf_token %}
                 
                 <div class="mb-3">
@@ -72,7 +77,13 @@
                 </div>
 
                 <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg">Reserve Now</button>
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        {% if form.instance.pk %}
+                            Update Reservation
+                        {% else %}
+                            Reserve Now
+                        {% endif %}
+                    </button>
                 </div>
             </form>
         </div>

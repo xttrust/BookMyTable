@@ -1,11 +1,10 @@
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Reservation
 from .forms import ReservationForm
 from table.models import Table
-from datetime import datetime, time
-
+from datetime import datetime, time as dt_time
 
 @login_required
 def reservation_list(request):
@@ -41,17 +40,13 @@ def reserve_table(request):
         else:
             # Additional time validation
             reservation_time = datetime.strptime(reservation_time, '%H:%M').time()
-            start_time = time(8, 0)  # 8 AM
-            end_time = time(21, 0)  # 9 PM
+            start_time = dt_time(8, 0)  # 8 AM
+            end_time = dt_time(21, 0)  # 9 PM
 
             if not (start_time <= reservation_time <= end_time):
                 messages.error(request, f"Reservation time must be between {start_time.strftime('%H:%M')} and {end_time.strftime('%H:%M')}.")
             elif form.is_valid():
                 # Check for existing reservations that conflict with the new reservation
-                reservation_datetime = datetime.combine(
-                    form.cleaned_data['reservation_date'], 
-                    form.cleaned_data['reservation_time']
-                )
                 conflicting_reservations = Reservation.objects.filter(
                     table_id=table_id,
                     reservation_date=form.cleaned_data['reservation_date'],
@@ -81,6 +76,29 @@ def reserve_table(request):
     
     return render(request, 'reservations/reserve_table.html', {'form': form})
 
-
 def reservation_success(request):
     return render(request, 'reservations/reservation_success.html')
+
+@login_required
+def edit_reservation(request, pk):
+    reservation = get_object_or_404(Reservation, pk=pk)
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Reservation updated successfully!')
+            return redirect('reservations:reservation_list')
+    else:
+        form = ReservationForm(instance=reservation)
+    
+    return render(request, 'reservations/reserve_table.html', {'form': form})
+
+@login_required
+def delete_reservation(request, pk):
+    reservation = get_object_or_404(Reservation, pk=pk)
+    if request.method == 'POST':
+        reservation.delete()
+        messages.success(request, 'Reservation deleted successfully!')
+        return redirect('reservations:reservation_list')
+    
+    return render(request, 'reservations/confirm_delete.html', {'reservation': reservation})
