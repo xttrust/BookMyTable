@@ -3,15 +3,18 @@
 {% load custom_filters %}
 
 {% block content %}
+<!-- Container for the contact form section -->
 <div class="container py-5">
     <h2 class="text-center mb-4">Contact Us</h2>
     <p class="text-secondary mb-5 text-center">We’d love to hear from you! Please fill out the form below to get in touch with us.</p>
 
     <div class="row justify-content-center">
         <div class="col-lg-8">
+            <!-- Display messages (success, error, etc.) -->
             {% if messages %}
                 <div class="mb-4">
                     {% for message in messages %}
+                        <!-- Determine the alert style based on message type -->
                         {% if message.tags == 'error' %}
                             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         {% elif message.tags == 'success' %}
@@ -28,12 +31,15 @@
                 </div>
             {% endif %}
             
+            <!-- Contact form -->
             <form method="post" action="{% url 'contact' %}">
                 {% csrf_token %}
                 
+                <!-- Full Name Field -->
                 <div class="mb-3">
                     <label for="id_fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
                     {{ form.fullname|add_class:"form-control" }}
+                    <!-- Display errors for the Full Name field -->
                     {% if form.fullname.errors %}
                         <div class="text-danger">
                             {% for error in form.fullname.errors %}
@@ -43,9 +49,11 @@
                     {% endif %}
                 </div>
                 
+                <!-- Email Field -->
                 <div class="mb-3">
                     <label for="id_email" class="form-label">Email <span class="text-danger">*</span></label>
                     {{ form.email|add_class:"form-control" }}
+                    <!-- Display errors for the Email field -->
                     {% if form.email.errors %}
                         <div class="text-danger">
                             {% for error in form.email.errors %}
@@ -55,9 +63,11 @@
                     {% endif %}
                 </div>
                 
+                <!-- Phone Number Field -->
                 <div class="mb-3">
                     <label for="id_phone" class="form-label">Phone Number</label>
                     {{ form.phone|add_class:"form-control" }}
+                    <!-- Display errors for the Phone Number field -->
                     {% if form.phone.errors %}
                         <div class="text-danger">
                             {% for error in form.phone.errors %}
@@ -67,9 +77,11 @@
                     {% endif %}
                 </div>
                 
+                <!-- Message Field -->
                 <div class="mb-3">
                     <label for="id_message" class="form-label">Message <span class="text-danger">*</span></label>
                     {{ form.message|add_class:"form-control" }}
+                    <!-- Display errors for the Message field -->
                     {% if form.message.errors %}
                         <div class="text-danger">
                             {% for error in form.message.errors %}
@@ -79,6 +91,7 @@
                     {% endif %}
                 </div>
                 
+                <!-- Submit Button -->
                 <div class="text-center mt-4">
                     <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
                 </div>
