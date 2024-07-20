@@ -26,6 +26,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('tables/', include('table.urls')),
     path('menu/', include('menu.urls')),
-    
+    path('reservations/', include('reservations.urls')),
     path('', include('pages.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
