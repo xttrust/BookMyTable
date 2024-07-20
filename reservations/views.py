@@ -11,7 +11,7 @@ RESTAURANT_CAPACITY = 60
 
 @login_required
 def reservation_list(request):
-    reservations = Reservation.objects.all()  # Fetch all reservations
+    reservations = Reservation.objects.filter(user=request.user) 
     return render(request, 'reservations/reservation_list.html', {'reservations': reservations})
 
 @login_required
