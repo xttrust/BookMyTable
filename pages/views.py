@@ -52,11 +52,3 @@ class AboutPageView(TemplateView):
     """
     template_name = 'pages/about.html'
 
-class MenuPageView(TemplateView):
-    """
-    View for the menu page. Inherits from TemplateView.
-
-    Attributes:
-        template_name (str): The template to be used for rendering the menu page.
-    """
-    template_name = 'pages/menu.html'

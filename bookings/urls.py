@@ -20,12 +20,27 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    # Admin panel URL
     path('admin/', admin.site.urls),
+
+    # Authentication URLs managed by django-allauth
     path("accounts/", include("allauth.urls")),
+
+    # Include URLs for the contact app
     path('contact/', include('contact.urls')),
+
+    # Include URLs for Summernote admin interface
     path('summernote/', include('django_summernote.urls')),
+
+    # Include URLs for the table app
     path('tables/', include('table.urls')),
+
+    # Include URLs for the menu app
     path('menu/', include('menu.urls')),
+
+    # Include URLs for the reservations app
     path('reservations/', include('reservations.urls')),
+
+    # Include URLs for the pages app (e.g., home, about)
     path('', include('pages.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
