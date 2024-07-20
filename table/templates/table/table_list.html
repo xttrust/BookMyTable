@@ -2,13 +2,19 @@
 
 {% block content %}
 <div class="container mt-5">
+    <!-- Page header -->
     <h1>Tables</h1>
+    
     <div class="row">
+        <!-- Loop through each table in the tables context variable -->
         {% for table in tables %}
         <div class="col-md-4">
+            <!-- Card component for displaying individual table information -->
             <div class="card mb-4">
                 <div class="card-body">
+                    <!-- Display the table number -->
                     <h5 class="card-title">Table {{ table.number }}</h5>
+                    <!-- Display the number of seats available at the table -->
                     <p class="card-text">Seats: {{ table.seats }}</p>
                 </div>
             </div>
