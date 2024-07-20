@@ -10,6 +10,7 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Date</th>
+                <th>Time</th>
                 <th>Number of People</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                 <td>{{ reservation.email }}</td>
                 <td>{{ reservation.phone }}</td>
                 <td>{{ reservation.reservation_date }}</td>
+                <td>{{ reservation.reservation_time }}</td>
                 <td>{{ reservation.number_of_people }}</td>
             </tr>
             {% empty %}
