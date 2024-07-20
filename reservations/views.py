@@ -53,31 +53,31 @@ def reserve_table(request):
                 messages.error(request, f"Reservation time must be between {start_time.strftime('%H:%M')} and {end_time.strftime('%H:%M')}.")
             elif form.is_valid():
                 # Check for duplicate reservations by the same user on the same date
-                user_conflicting_reservations = Reservation.objects.filter(
+                if Reservation.objects.filter(
                     user=request.user,
                     reservation_date=form.cleaned_data['reservation_date']
-                )
-                if user_conflicting_reservations.exists():
+                ).exists():
                     messages.error(request, 'You already have a reservation on this date.')
-
-                # Check for existing reservations that conflict with the new reservation
-                conflicting_reservations = Reservation.objects.filter(
-                    reservation_date=form.cleaned_data['reservation_date'],
-                    reservation_time=form.cleaned_data['reservation_time']
-                )
-
-                # Calculate the total number of people for the existing reservations
-                total_people = sum(reservation.number_of_people for reservation in conflicting_reservations)
-
-                # Check if adding the new reservation would exceed capacity
-                if total_people + int(form.cleaned_data['number_of_people']) > RESTAURANT_CAPACITY:
-                    messages.error(request, f"Reservation exceeds the restaurant's capacity of {RESTAURANT_CAPACITY} people.")
                 else:
-                    # Save the reservation
-                    reservation = form.save(commit=False)
-                    reservation.user = request.user
-                    reservation.save()
-                    return redirect('reservations:reservation_success')
+                    # Check for existing reservations that conflict with the new reservation
+                    conflicting_reservations = Reservation.objects.filter(
+                        reservation_date=form.cleaned_data['reservation_date'],
+                        reservation_time=form.cleaned_data['reservation_time']
+                    )
+
+                    # Calculate the total number of people for the existing reservations
+                    total_people = sum(reservation.number_of_people for reservation in conflicting_reservations)
+
+                    # Check if adding the new reservation would exceed capacity
+                    if total_people + int(form.cleaned_data['number_of_people']) > RESTAURANT_CAPACITY:
+                        messages.error(request, f"Reservation exceeds the restaurant's capacity of {RESTAURANT_CAPACITY} people.")
+                    else:
+                        # Save the reservation
+                        reservation = form.save(commit=False)
+                        reservation.user = request.user
+                        reservation.save()
+                        messages.success(request, 'Reservation created successfully!')
+                        return redirect('reservations:reservation_success')
             else:
                 # If form is not valid, get errors and show them
                 for field, errors in form.errors.as_data().items():
