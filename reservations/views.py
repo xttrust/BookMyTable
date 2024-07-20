@@ -6,6 +6,9 @@ from .forms import ReservationForm
 from table.models import Table
 from datetime import datetime, time as dt_time
 
+# Define the restaurant's capacity
+RESTAURANT_CAPACITY = 60
+
 @login_required
 def reservation_list(request):
     reservations = Reservation.objects.all()  # Fetch all reservations
@@ -33,8 +36,8 @@ def reserve_table(request):
             messages.error(request, 'Reservation Date is required.')
         elif not reservation_time:
             messages.error(request, 'Reservation Time is required.')
-        elif not number_of_people or not number_of_people.isdigit() or int(number_of_people) <= 0:
-            messages.error(request, 'Number of People must be bigger than 0.')
+        elif not number_of_people or not number_of_people.isdigit() or int(number_of_people) <= 0 or int(number_of_people) > 60:
+            messages.error(request, 'Number of People must be between 1 and 60.')
         elif not table_id:
             messages.error(request, 'Table selection is required.')
         else:
@@ -46,23 +49,24 @@ def reserve_table(request):
             if not (start_time <= reservation_time <= end_time):
                 messages.error(request, f"Reservation time must be between {start_time.strftime('%H:%M')} and {end_time.strftime('%H:%M')}.")
             elif form.is_valid():
-                # Check if the user already has a reservation on the same date
-                user_reservations = Reservation.objects.filter(
+                # Check if the user already has a reservation on the same day
+                user_same_day_reservations = Reservation.objects.filter(
                     user=request.user,
                     reservation_date=form.cleaned_data['reservation_date']
                 )
-                if user_reservations.exists():
-                    messages.error(request, 'You already have a reservation for this date.')
+                if user_same_day_reservations.exists():
+                    messages.error(request, 'You already have a reservation on this day.')
                 else:
-                    # Check for existing reservations that conflict with the new reservation
-                    conflicting_reservations = Reservation.objects.filter(
-                        table_id=table_id,
-                        reservation_date=form.cleaned_data['reservation_date'],
-                        reservation_time=form.cleaned_data['reservation_time']
-                    )
-                    if conflicting_reservations.exists():
-                        messages.error(request, 'The selected table is already booked for this time.')
+                    # Check the total number of people for all reservations on the same day
+                    total_people_on_day = sum(reservation.number_of_people for reservation in Reservation.objects.filter(
+                        reservation_date=form.cleaned_data['reservation_date']
+                    ))
+
+                    # Check if adding the new reservation would exceed capacity
+                    if total_people_on_day + int(number_of_people) > RESTAURANT_CAPACITY:
+                        messages.error(request, f"Reservation exceeds the restaurant's capacity of {RESTAURANT_CAPACITY} people.")
                     else:
+                        # Save the reservation
                         reservation = form.save(commit=False)
                         reservation.user = request.user
                         reservation.save()
@@ -83,6 +87,8 @@ def reserve_table(request):
         form = ReservationForm(initial=initial_data)
     
     return render(request, 'reservations/reserve_table.html', {'form': form})
+
+
 def reservation_success(request):
     return render(request, 'reservations/reservation_success.html')
 
