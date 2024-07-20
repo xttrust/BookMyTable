@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect
+# views.py
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Reservation
 from .forms import ReservationForm
@@ -16,11 +17,17 @@ def reserve_table(request):
             reservation = form.save(commit=False)
             reservation.user = request.user
             reservation.save()
-            return redirect('reservation_success')  # Redirect to a success page or list view
+            return redirect('reservations:reservation_success')
     else:
-        form = ReservationForm()
+        # Pre-fill the form with the user's data
+        initial_data = {
+            'full_name': request.user.get_full_name(),
+            'email': request.user.email,
+            'phone': '',  # Optional
+        }
+        form = ReservationForm(initial=initial_data)
     
-    return render(request, 'reservations/reservation_form.html', {'form': form})
+    return render(request, 'reservations/reserve_table.html', {'form': form})
 
 def reservation_success(request):
     return render(request, 'reservations/reservation_success.html')
