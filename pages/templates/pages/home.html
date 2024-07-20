@@ -2,21 +2,15 @@
 {% load static %}
 {% block content %}
 
-
 <!-- Hero -->
 <div class="container col-xxl-8 px-4 py-5 shadow">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="{% static 'images/hero-image.jpg' %}" class="d-block mx-lg-auto img-fluid rounded" alt="A picture from inside our restaurant with tables"
-                width="700" height="500" loading="lazy">
+            <img src="{% static 'images/hero-image.jpg' %}" class="d-block mx-lg-auto img-fluid rounded" alt="A picture from inside our restaurant with tables" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Reserve Your Table at BookMyTable
-            </h1>
-            <p class="lead">Discover a delightful dining experience at BookMyTable. Book your table
-                seamlessly with our easy-to-use platform. Enjoy exquisite dishes, impeccable service, and create
-                memorable moments.
-            </p>
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Reserve Your Table at BookMyTable</h1>
+            <p class="lead">Discover a delightful dining experience at BookMyTable. Book your table seamlessly with our easy-to-use platform. Enjoy exquisite dishes, impeccable service, and create memorable moments.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                 <button type="button" class="btn btn-outline-danger btn-lg px-4">Book your table now</button>
             </div>
@@ -26,14 +20,13 @@
 
 <hr class="my-5 border-top border-secondary">
 
-<!-- About us  -->
+<!-- About us -->
 <section class="bsb-service-7 py-5 py-xl-8" id="about_us">
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7">
                 <h3 class="fs-5 mb-2 text-secondary text-center text-uppercase">About Us</h3>
-                <p class="text-secondary mb-5 text-center">We offer premier services where excellence meets
-                    affordability.</p>
+                <p class="text-secondary mb-5 text-center">We offer premier services where excellence meets affordability.</p>
             </div>
         </div>
     </div>
@@ -48,8 +41,7 @@
                                 <div class="card-body text-center p-5">
                                     <i class="fas fa-bookmark text-primary mb-4 fa-3x"></i>
                                     <h4 class="fw-bold text-uppercase mb-4">Table Reservation</h4>
-                                    <p class="mb-4 text-secondary">Effortlessly reserve tables for your dining
-                                        experience, ensuring you have the perfect spot.</p>
+                                    <p class="mb-4 text-secondary">Effortlessly reserve tables for your dining experience, ensuring you have the perfect spot.</p>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +50,7 @@
                                 <div class="card-body text-center p-5">
                                     <i class="fas fa-calendar-check text-primary mb-4 fa-3x"></i>
                                     <h4 class="fw-bold text-uppercase mb-4">Event Reservations</h4>
-                                    <p class="mb-4 text-secondary">Book special events or private dining experiences
-                                        for groups, celebrations, or business meetings.</p>
+                                    <p class="mb-4 text-secondary">Book special events or private dining experiences for groups, celebrations, or business meetings.</p>
                                 </div>
                             </div>
                         </div>
@@ -68,8 +59,7 @@
                                 <div class="card-body text-center p-5">
                                     <i class="fas fa-history text-primary mb-4 fa-3x"></i>
                                     <h4 class="fw-bold text-uppercase mb-4">Order History</h4>
-                                    <p class="mb-4 text-secondary">Access your order history to view past
-                                        reservations, reorder favorite meals, and manage dining preferences.</p>
+                                    <p class="mb-4 text-secondary">Access your order history to view past reservations, reorder favorite meals, and manage dining preferences.</p>
                                 </div>
                             </div>
                         </div>
@@ -85,120 +75,45 @@
 
 <!-- Menu -->
 <div class="container py-5" id="menu">
-    <h2 class="text-center mb-4">Menu</h2>
+    <h2 class="text-center mb-4">Our Menu</h2>
+    <p class="text-secondary mb-5 text-center">Explore our diverse menu, crafted with passion and the finest ingredients. From hearty breakfasts to delightful dinners, our dishes are designed to please every palate. Whether you're here for a casual meal or a special occasion, we have something delicious waiting for you!</p>
+
     <!-- Menu Tabs -->
     <ul class="nav nav-pills justify-content-center mb-4" id="menu-tabs" role="tablist">
+        {% for category, items in menu_items_by_category %}
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="breakfast-tab" data-bs-toggle="pill" data-bs-target="#breakfast"
-                type="button" role="tab" aria-controls="breakfast" aria-selected="true">Breakfast</button>
+            <a class="nav-link {% if forloop.first %}active{% endif %}" id="{{ category.name|slugify }}-tab" data-bs-toggle="pill" href="#{{ category.name|slugify }}" role="tab" aria-controls="{{ category.name|slugify }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ category.name }}</a>
         </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="lunch-tab" data-bs-toggle="pill" data-bs-target="#lunch" type="button"
-                role="tab" aria-controls="lunch" aria-selected="false">Lunch</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="dinner-tab" data-bs-toggle="pill" data-bs-target="#dinner" type="button"
-                role="tab" aria-controls="dinner" aria-selected="false">Dinner</button>
-        </li>
+        {% endfor %}
     </ul>
+    
     <!-- Menu Content -->
     <div class="tab-content" id="menuContent">
-        <!-- Tab Pane: Breakfast -->
-        <div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
+        {% for category, items in menu_items_by_category %}
+        <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="{{ category.name|slugify }}" role="tabpanel" aria-labelledby="{{ category.name|slugify }}-tab">
             <div class="row row-cols-1 row-cols-md-3 g-3">
-                <!-- Placeholder cards for breakfast -->
+                {% for item in items %}
                 <div class="col">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Breakfast Image">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="{{ item.name }}">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="#">Breakfast Item 1</a></h5>
+                            <h5 class="card-title">{{ item.name }}</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Breakfast Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Breakfast Item 2</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Breakfast Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Breakfast Item 3</a></h5>
-                        </div>
-                    </div>
-                </div>
+                {% empty %}
+                <p class="text-center">No items available in this category.</p>
+                {% endfor %}
             </div>
         </div>
-        <!-- Tab Pane: Lunch -->
-        <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
-            <div class="row row-cols-1 row-cols-md-3 g-3">
-                <!-- Placeholder cards for lunch -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lunch Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Lunch Item 1</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lunch Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Lunch Item 2</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Lunch Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Lunch Item 3</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Tab Pane: Dinner -->
-        <div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
-            <div class="row row-cols-1 row-cols-md-3 g-3">
-                <!-- Placeholder cards for dinner -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dinner Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Dinner Item 1</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dinner Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Dinner Item 2</a></h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dinner Image">
-                        <div class="card-body">
-                            <h5 class="card-title"><a href="#">Dinner Item 3</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
     <div class="text-center mt-4">
-        <a href="#" class="btn btn-outline-danger btn-lg">See More Menu Items</a>
+        <a href="{% url 'menu' %}" class="btn btn-outline-danger btn-lg">See More Menu Items</a>
     </div>
 </div>
+
 
 <hr class="my-5 border-top border-secondary">
 
@@ -208,9 +123,7 @@
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                 <h2 class="mb-4 display-5 text-center">Contact</h2>
-                <p class="text-secondary mb-5 text-center">The best way to contact us is to use our contact form
-                    below.
-                    Please fill out all of the required fields and we will get back to you as soon as possible.</p>
+                <p class="text-secondary mb-5 text-center">The best way to contact us is to use our contact form below. Please fill out all of the required fields and we will get back to you as soon as possible.</p>
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
             </div>
         </div>
@@ -224,20 +137,16 @@
                     <form action="#!">
                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                             <div class="col-12">
-                                <label for="fullname" class="form-label">Full Name <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullname" name="fullname" value=""
-                                    required>
+                                <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <label for="email" class="form-label">Email <span
-                                        class="text-danger">*</span></label>
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <span class="input-group-text">
                                         <i class="fas fa-envelope"></i>
                                     </span>
-                                    <input type="email" class="form-control" id="email" name="email" value=""
-                                        required>
+                                    <input type="email" class="form-control" id="email" name="email" value="" required>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
@@ -250,10 +159,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <label for="message" class="form-label">Message <span
-                                        class="text-danger">*</span></label>
-                                <textarea class="form-control" id="message" name="message" rows="3"
-                                    required></textarea>
+                                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                             </div>
                             <div class="col-12">
                                 <div class="d-grid">
@@ -268,6 +175,5 @@
         </div>
     </div>
 </section>
-
 
 {% endblock content %}
