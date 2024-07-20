@@ -1,6 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from .models import Reservation
 from .forms import ReservationForm
+
+@login_required
+def reservation_list(request):
+    reservations = Reservation.objects.all()  # Fetch all reservations
+    return render(request, 'reservations/reservation_list.html', {'reservations': reservations})
 
 @login_required
 def reserve_table(request):
@@ -15,3 +21,6 @@ def reserve_table(request):
         form = ReservationForm()
     
     return render(request, 'reservations/reservation_form.html', {'form': form})
+
+def reservation_success(request):
+    return render(request, 'reservations/reservation_success.html')
