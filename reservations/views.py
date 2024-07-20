@@ -34,7 +34,7 @@ def reserve_table(request):
         elif not reservation_time:
             messages.error(request, 'Reservation Time is required.')
         elif not number_of_people or not number_of_people.isdigit() or int(number_of_people) <= 0:
-            messages.error(request, 'Number of People must be a positive integer.')
+            messages.error(request, 'Number of People must be bigger than 0.')
         elif not table_id:
             messages.error(request, 'Table selection is required.')
         else:
@@ -46,19 +46,27 @@ def reserve_table(request):
             if not (start_time <= reservation_time <= end_time):
                 messages.error(request, f"Reservation time must be between {start_time.strftime('%H:%M')} and {end_time.strftime('%H:%M')}.")
             elif form.is_valid():
-                # Check for existing reservations that conflict with the new reservation
-                conflicting_reservations = Reservation.objects.filter(
-                    table_id=table_id,
-                    reservation_date=form.cleaned_data['reservation_date'],
-                    reservation_time=form.cleaned_data['reservation_time']
+                # Check if the user already has a reservation on the same date
+                user_reservations = Reservation.objects.filter(
+                    user=request.user,
+                    reservation_date=form.cleaned_data['reservation_date']
                 )
-                if conflicting_reservations.exists():
-                    messages.error(request, 'The selected table is already booked for this time.')
+                if user_reservations.exists():
+                    messages.error(request, 'You already have a reservation for this date.')
                 else:
-                    reservation = form.save(commit=False)
-                    reservation.user = request.user
-                    reservation.save()
-                    return redirect('reservations:reservation_success')
+                    # Check for existing reservations that conflict with the new reservation
+                    conflicting_reservations = Reservation.objects.filter(
+                        table_id=table_id,
+                        reservation_date=form.cleaned_data['reservation_date'],
+                        reservation_time=form.cleaned_data['reservation_time']
+                    )
+                    if conflicting_reservations.exists():
+                        messages.error(request, 'The selected table is already booked for this time.')
+                    else:
+                        reservation = form.save(commit=False)
+                        reservation.user = request.user
+                        reservation.save()
+                        return redirect('reservations:reservation_success')
             else:
                 # If form is not valid, get errors and show them
                 for field, errors in form.errors.as_data().items():
@@ -75,7 +83,6 @@ def reserve_table(request):
         form = ReservationForm(initial=initial_data)
     
     return render(request, 'reservations/reserve_table.html', {'form': form})
-
 def reservation_success(request):
     return render(request, 'reservations/reservation_success.html')
 
