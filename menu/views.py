@@ -28,7 +28,7 @@ class MenuItemListView(TemplateView):
         menu_items_by_category = []
         for category in categories:
             items = MenuItem.objects.filter(category=category)
-            paginator = Paginator(items, 1)  # 9 items per page
+            paginator = Paginator(items, 9)  #  items per page
             page_number = self.request.GET.get(f'{slugify(category.name)}_page', 1)
             page_obj = paginator.get_page(page_number)
             menu_items_by_category.append((category, page_obj))

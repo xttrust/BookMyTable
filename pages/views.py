@@ -43,12 +43,3 @@ class HomePageView(TemplateView):
         return context
 
 
-class AboutPageView(TemplateView):
-    """
-    View for the about page. Inherits from TemplateView.
-
-    Attributes:
-        template_name (str): The template to be used for rendering the about page.
-    """
-    template_name = 'pages/about.html'
-
