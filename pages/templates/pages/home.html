@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 
@@ -7,7 +7,7 @@
 <div class="container col-xxl-8 px-4 py-5 shadow">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
         <div class="col-10 col-sm-8 col-lg-6">
-            <img src="https://placehold.co/700x500" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+            <img src="{% static 'images/hero-image.jpg' %}" class="d-block mx-lg-auto img-fluid rounded" alt="A picture from inside our restaurant with tables"
                 width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
