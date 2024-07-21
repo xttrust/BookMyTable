@@ -13,7 +13,7 @@ Explore the live application at [BookMyTable Deployed Site](https://bookmytable-
 
   
 
-![BookMyTable Image](./docs/images/banner-image.png)
+![BookMyTable Image](./docs/images/header.jpg)
 
   
 
@@ -326,3 +326,31 @@ To ensure a clean and modern typography, I use Google Fonts. This provides a sel
 <details><summary>View Reservations</summary>
 <img src="./docs/wireframes/wf-view-reservations-mobile.png">
 </details>
+
+
+### Agile Methodology
+
+In my project, **BookMyTable**, I use Agile methodology to help manage the development process effectively. Here’s how it works:
+
+1. **Work in Short Cycles (Sprints)**
+   - I break the project into small, manageable chunks called sprints, each lasting about two days to one week. At the end of each sprint, I review what has been accomplished and plan the next steps.
+
+2. **Define What to Build (User Stories)**
+   - I write user stories to describe what features or improvements are needed. Each story outlines what needs to be done from the user’s perspective, making it clear what the goal is.
+
+3. **Daily Check-ins**
+   - I do quick daily updates to keep track of progress, identify any problems, and stay focused on the goals for the current sprint.
+
+4. **Plan the Sprint**
+   - At the start of each sprint, I plan which user stories or tasks I will work on. This helps me set clear goals and manage my time effectively.
+
+5. **Review and Get Feedback**
+   - At the end of each sprint, I review the work done and gather feedback. This helps me ensure the project is on the right track and meets the desired goals.
+
+6. **Reflect and Improve**
+   - After each sprint, I take time to reflect on what went well and what could be improved. This helps me make better decisions and improve my process for the next sprint.
+
+7. **Stay Flexible**
+   - I remain open to changes and adapt my plans as needed based on feedback or new insights. This flexibility helps me respond to any changes or challenges that arise.
+
+By using Agile, I manage the project in a way that allows for regular progress checks, continuous improvement, and adjustments based on feedback. This approach helps me stay organized and focused while adapting to new information and ensuring the project evolves effectively.
