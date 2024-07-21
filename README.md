@@ -354,3 +354,84 @@ In my project, **BookMyTable**, I use Agile methodology to help manage the devel
    - I remain open to changes and adapt my plans as needed based on feedback or new insights. This flexibility helps me respond to any changes or challenges that arise.
 
 By using Agile, I manage the project in a way that allows for regular progress checks, continuous improvement, and adjustments based on feedback. This approach helps me stay organized and focused while adapting to new information and ensuring the project evolves effectively.
+
+#### GitHub Projects/Board
+
+The project adopted a basic Board structure, which was divided into columns such as Todo, In Progress, and Done. This setup provided a clear and organized way to track the progress of tasks, making it easier to visualize and manage the workflow throughout the development process. The GitHub project Board was linked to the repo for consistent reference.
+
+<details><summary>View GitHub Board</summary>
+<img src="./docs/images/github-board.jpg">
+</details>
+
+## Features
+
+### Navigation Header
+
+The navigation bar is a consistent element across all pages, designed using Bootstrap and optimized for full responsiveness. The layout is as follows:
+
+- **Left Side**: Displays the website name.
+- **Middle**: Contains the main menu for navigation through the website’s content.
+- **Right Side**: Dedicated to user authentication. Authenticated users have additional options to create posts and view their profile, while unauthenticated users are prompted to log in or register.
+
+In the mobile version of the navbar, all content is accessible via a hamburger icon. Clicking this icon displays a dropdown with all navigation links.
+
+<details><summary>Desktop</summary>
+<img src="./docs/images/features/desktop-nav.png" alt="Desktop Navbar">
+</details>
+
+<details><summary>Mobile</summary>
+<img src="./docs/images/features/mobile-nav.png" alt="Mobile Navbar">
+</details>
+
+<details><summary>Authenticated</summary>
+<img src="./docs/images/features/auth-nav.png" alt="Authenticated Navbar">
+</details>
+
+<details><summary>Unauthenticated</summary>
+<img src="./docs/images/features/unauth-nav.png" alt="Unauthenticated Navbar">
+</details>
+
+### Footer
+
+The footer is designed to provide essential information and quick links. The layout is as follows:
+
+- **Left Side**: Displays the website name.
+- **Center**: Includes a message stating "Made with love by Florin Pinta."
+- **Right Side**: Contains social media icons linking to various social platforms.
+
+<details><summary>Footer Desktop</summary>
+<img src="./docs/images/features/footer-desktop.png" alt="Footer Desktop">
+</details>
+
+<details><summary>Footer Mobile</summary>
+<img src="./docs/images/features/footer-mobile.png" alt="Footer Mobile">
+</details>
+
+### Hero
+
+The Hero section is designed to capture attention and convey the core value of **BookMyTable** at a glance. It features a prominent, engaging headline and a brief description that highlight the main benefits of the application. This section includes a call-to-action button to encourage users to explore further or get started with the service. The design is visually appealing, utilizing large background images or graphics to create an impactful introduction to the platform.
+
+<details><summary>Hero Desktop</summary>
+<img src="./docs/images/features/hero-desktop.png" alt="Hero Desktop">
+</details>
+
+<details><summary>Hero Mobile</summary>
+<img src="./docs/images/features/hero-mobile.png" alt="Hero Mobile">
+</details>
+
+### About Us
+
+#### Section Breakdown
+
+- **Header**: The section begins with a centered headline "About Us" and a brief description that emphasizes the balance between excellence and affordability in the services provided.
+
+- **Service Features**: The section is divided into three main features, each represented by an icon, a headline, and a descriptive text. These features highlight the primary offerings of the application:
+
+<details><summary>About Us Desktop</summary>
+<img src="./docs/images/features/about-desktop.png" alt="About Us Desktop">
+</details>
+<details><summary>About Us Mobile</summary>
+<img src="./docs/images/features/about-mobile.png" alt="About Us Mobile">
+</details>
+
+This section effectively communicates the core features of **BookMyTable** in a clean and engaging layout. The use of icons and descriptive text helps users quickly understand the benefits of the platform, enhancing their overall experience.
