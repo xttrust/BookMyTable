@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <!-- Menu -->
 <div class="container py-5" id="menu">
@@ -23,7 +23,11 @@
                 {% for item in page_obj %}
                 <div class="col">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="{{ item.name }}">
+                        {% if "placeholder" in item.image.url %}
+                        <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="placeholder image">
+                        {% else %}
+                        <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+                        {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{ item.name }}</h5>
                             <p class="card-text">{{ item.description|safe }}</p>
