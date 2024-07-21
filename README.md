@@ -5,7 +5,7 @@
 
 Explore the live application at [BookMyTable Deployed Site](https://bookmytable-8de20a7bca65.herokuapp.com/).
 
-![BookMyTable Image](./docs/images/banner-image.png)
+![BookMyTable Image](./docs/images/header.jpg)
 
 ## User Experience
 
@@ -124,5 +124,5 @@ The default Bootstrap 5 color scheme has been selected for **BookMyTable**. Thes
 
 ### Database Diagram
 
-![Database Diagram](./docs/images/database-diagram.png)
+![Database Diagram](./docs/database-diagram.png)
 
