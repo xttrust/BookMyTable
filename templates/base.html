@@ -61,7 +61,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'reservations:reserve_table' %}">Reserve a Table</a></li>
                             <li><a class="dropdown-item" href="{% url 'reservations:reservation_list' %}">My Reservations</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
                             {% if user.is_superuser %}
                             <li>
                                 <hr class="dropdown-divider">
