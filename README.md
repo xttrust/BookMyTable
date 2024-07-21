@@ -5,7 +5,7 @@
 
 Explore the live application at [BookMyTable Deployed Site](https://bookmytable-8de20a7bca65.herokuapp.com/).
 
-![BookMyTable Image](./docs/screenshots/header.jpg)
+![BookMyTable Image](./docs/images/banner-image.png)
 
 ## User Experience
 
@@ -23,7 +23,6 @@ Explore the live application at [BookMyTable Deployed Site](https://bookmytable-
 #### Existing User
 
 1. As an existing user, I can **view and manage my reservations** so that I can keep track of my dining plans. [#12](https://github.com/xttrust/BookMyTable/issues/12)
-2. As an existing user, I can **update my profile information** so that my details are current. [#6](https://github.com/xttrust/BookMyTable/issues/6)
 
 #### Admin
 
@@ -110,4 +109,20 @@ The **BookMyTable** application aims to provide a streamlined and efficient plat
 - **Write Documentation**: As a developer, I want to write documentation to help users and future developers. [#21](https://github.com/xttrust/BookMyTable/issues/21)
 
 </details>
+
+
+
+## Design
+
+### Goal
+
+The design of **BookMyTable** aims to provide a clean, modern, and user-friendly interface that enhances the user experience for both diners and restaurant staff. By utilizing the default Bootstrap 5 theme, we ensure a responsive and consistent look across different devices and screen sizes. This choice simplifies the design process while maintaining a professional appearance.
+
+### Colour Scheme
+
+The default Bootstrap 5 color scheme has been selected for **BookMyTable**. These colors are carefully chosen to provide a balanced and visually appealing aesthetic that suits a wide range of applications. The Bootstrap 5 palette ensures excellent readability and accessibility, which is essential for a diverse user base. The familiar and neutral tones help create a welcoming and easy-to-navigate environment for users.
+
+### Database Diagram
+
+![Database Diagram](./docs/images/database-diagram.png)
 
