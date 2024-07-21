@@ -6,24 +6,25 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
-
-            <p>{% blocktrans %}Welcome back to BookMyTable! To book a table or manage your reservations, please log in. If you
-                don't have an account yet, <a class="link" href="{{ signup_url }}">sign up here</a> to get started.{% endblocktrans %}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
+<div class="container my-5 p-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="text-center mb-4">
+                <h2>{% trans "Sign In" %}</h2>
+                <p class="text-secondary">
+                    {% blocktrans %}Welcome back to BookMyTable! To book a table or manage your reservations, please log in. If you
+                    don't have an account yet, <a class="link" href="{{ signup_url }}">sign up here</a> to get started.{% endblocktrans %}
+                </p>
+            </div>
+            <form class="login bg-light p-4 rounded shadow-lg mt-5 p-5" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-danger" type="submit">{% trans "Sign In" %}</button>
+                <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-primary btn-lg" type="submit">{% trans "Sign In" %}</button>
+                </div>
             </form>
         </div>
     </div>
