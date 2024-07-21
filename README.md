@@ -435,3 +435,196 @@ The Hero section is designed to capture attention and convey the core value of *
 </details>
 
 This section effectively communicates the core features of **BookMyTable** in a clean and engaging layout. The use of icons and descriptive text helps users quickly understand the benefits of the platform, enhancing their overall experience.
+
+
+### Our Menu
+
+#### Section Breakdown
+
+- **Header**: The section starts with a centered headline "Our Menu" and a brief description inviting users to explore the diverse menu crafted with passion and fine ingredients. The description highlights the variety available, from hearty breakfasts to delightful dinners, catering to both casual meals and special occasions.
+
+- **Menu Tabs**: The section features a set of navigation tabs for different menu categories. Each tab corresponds to a category of menu items, allowing users to easily switch between different sections of the menu.
+
+- **Menu Content**: Below the tabs, the content displays the items in each category. Each item is showcased with an image, name, description, and price. If an item doesn’t have an image, a default placeholder is used. 
+
+- **Call to Action**: At the bottom of the section, a button invites users to see more menu items, linking to a dedicated page for a comprehensive menu view.
+
+<details><summary>Menu Desktop</summary>
+<img src="./docs/images/features/menu-desktop.png" alt="Menu Desktop">
+</details>
+
+<details><summary>Menu Mobile</summary>
+<img src="./docs/images/features/menu-mobile.png" alt="Menu Mobile">
+</details>
+
+This section provides a structured and engaging way to explore the diverse offerings of **BookMyTable**. The use of tabs and cards ensures a user-friendly experience, allowing visitors to browse through various menu categories and view detailed information about each item.
+
+For a detailed view of all menu items, including pagination and individual category listings.
+
+<details><summary>Detailed view of all menu items</summary>
+<img src="./docs/images/features/menu-full-desktop.png" alt="Detailed view of all menu items">
+</details>
+
+
+### Login
+
+#### Section Breakdown
+
+- **Header**: The section starts with a centered headline "Login" and a brief description encouraging users to enter their credentials to access their account.
+
+- **Login Form**: This includes fields for entering the username and password, as well as buttons for submitting the login information or navigating to the registration page.
+
+- **Call to Action**: A link is provided for users who need to register a new account or recover a forgotten password.
+
+<details><summary>Login Desktop</summary>
+<img src="./docs/images/features/login-desktop.png" alt="Login Desktop">
+</details>
+
+<details><summary>Login Mobile</summary>
+<img src="./docs/images/features/login-mobile.png" alt="Login Mobile">
+</details>
+
+This section allows users to securely access their accounts on **BookMyTable**. The simple and straightforward login form ensures a quick and easy sign-in process.
+
+
+### Register
+
+#### Section Breakdown
+
+- **Header**: The section begins with a centered headline "Register" and a description inviting users to create a new account to start using the services.
+
+- **Registration Form**: Contains fields for entering personal information such as name, email, and password, along with a submit button to create the account.
+
+- **Call to Action**: A link for users who already have an account, directing them to the login page.
+
+<details><summary>Register Desktop</summary>
+<img src="./docs/images/features/register-desktop.png" alt="Register Desktop">
+</details>
+
+<details><summary>Register Mobile</summary>
+<img src="./docs/images/features/register-mobile.png" alt="Register Mobile">
+</details>
+
+This section helps new users set up their accounts on **BookMyTable**, making it easy to start enjoying the platform’s features.
+
+
+### Logout
+
+#### Section Breakdown
+
+- **Header**: The section starts with a headline "Logout" and a short description confirming that the user is about to log out of their account.
+
+- **Logout Confirmation**: Includes a button to confirm the logout action, ensuring users can easily exit their account.
+
+- **Call to Action**: A link or button to log back in if users decide to return to their account.
+
+<details><summary>Logout Desktop</summary>
+<img src="./docs/images/features/logout-desktop.png" alt="Logout Desktop">
+</details>
+
+<details><summary>Logout Mobile</summary>
+<img src="./docs/images/features/logout-mobile.png" alt="Logout Mobile">
+</details>
+
+This section ensures users can securely log out of **BookMyTable**, with clear options to return to their account if needed.
+
+
+### My Reservations
+
+#### Section Breakdown
+
+- **Header**: The section features a centered headline "My Reservations" with a description highlighting the ability to view and manage past and upcoming reservations.
+
+- **Reservation List**: Displays a list or table of past and upcoming reservations, including details such as date, time, and status.
+
+- **Call to Action**: Links to make a new reservation or modify existing ones.
+
+<details><summary>My Reservations Desktop</summary>
+<img src="./docs/images/features/my-reservations-desktop.png" alt="My Reservations Desktop">
+</details>
+
+<details><summary>My Reservations Mobile</summary>
+<img src="./docs/images/features/my-reservations-mobile.png" alt="My Reservations Mobile">
+</details>
+
+This section allows users to easily manage their reservations on **BookMyTable**, providing a clear overview of their booking history.
+
+
+### Reserve a Table
+
+#### Section Breakdown
+
+- **Header**: The section starts with a headline "Reserve a Table" and a description encouraging users to book a table for their dining needs.
+
+- **Reservation Form**: Includes fields for selecting the date, time, number of guests, and any special requests, along with a submit button to finalize the reservation.
+
+- **Call to Action**: A link or button to view existing reservations or contact support for assistance.
+
+<details><summary>Reserve a Table Desktop</summary>
+<img src="./docs/images/features/reserve-table-desktop.png" alt="Reserve a Table Desktop">
+</details>
+
+<details><summary>Reserve a Table Mobile</summary>
+<img src="./docs/images/features/reserve-table-mobile.png" alt="Reserve a Table Mobile">
+</details>
+
+This section provides a user-friendly interface for booking a table on **BookMyTable**, ensuring a smooth and hassle-free reservation process.
+
+### Contact
+
+#### Section Breakdown
+
+- **Header**: The section begins with a centered headline "Contact Us" and a brief description inviting users to get in touch with any questions or feedback.
+
+- **Contact Form**: Includes fields for users to enter their name, email address, subject, and message, along with a submit button to send the inquiry.
+
+#### Form Handling
+
+- **Success Message**: On successful submission of the contact form, users will see a confirmation message: "Your message has been sent successfully." This message confirms that the inquiry has been received and will be addressed. 
+
+    <details><summary>Contact Success Message</summary>
+    <img src="./docs/images/features/contact-success-message.png" alt="Contact Success Message">
+    </details>
+
+- **Failure Message**: If the form submission fails due to validation errors or server issues, users will see an error message indicating what went wrong. This ensures that users are aware of the issue and can correct their input.
+
+#### Django Handling
+
+- **Form Processing**: In Django, form submissions are handled in the view function associated with the contact form. Upon submission, the form data is processed and validated.
+
+    - **On Success**: If the form data is valid, Django typically redirects the user to a success page or displays a success message on the same page using Django's messages framework.
+
+    - **On Failure**: If the form data is invalid (e.g., missing required fields, incorrect email format), Django will re-render the form with error messages for each invalid field. The user is prompted to correct their input and resubmit the form.
+
+- **Messages Framework**: Django’s messages framework is used to store and display one-time messages to users. It helps in providing feedback such as success or error messages after form submissions.
+
+#### HTML5 Validation
+
+- **Required Fields**: The contact form uses HTML5 attributes like `required` to ensure that users fill out all necessary fields. This client-side validation helps prevent form submission if required fields are empty.
+
+    ```html
+    <form method="post" action="{% url 'contact' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    ```
+
+- **Validation Feedback**: HTML5 provides instant feedback on invalid fields. For example, if a user tries to submit the form with an invalid email address or missing required fields, the browser will display a default error message.
+
+This section provides a comprehensive view of how the contact form operates, from user interaction to server-side processing.
