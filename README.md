@@ -629,6 +629,14 @@ This section provides a user-friendly interface for booking a table on **BookMyT
 
 This section provides a comprehensive view of how the contact form operates, from user interaction to server-side processing.
 
+## Technologies
+
+### Technologies Used
+
+- [Bootstrap](https://getbootstrap.com/) was used to quickly layout the responsive structure of the website
+- [Chat-GPT](https://chat.openai.com/) was used to create all written content and copy of the website
+- [GitPod Version of CI (VS Code)](https://codeinstitute-ide.net/) I used CodeInstitute ide to build this website
+
 ### Languages Used
 
 - **HTML (HyperText Markup Language)**
@@ -761,6 +769,15 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
     <img src="./docs/images/tests/pep8/pages-views.png" alt="Pages Views test results">
 </details>
 
+## Browser Testing
+
+The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.
+
+## Device Testing
+
+The website was tested on a variety of devices, including Desktop, and Samsung S21, to ensure that it displayed well on screens of different sizes, both in portrait and landscape orientations. The website functioned as expected, and its responsive design was validated using Chrome developer tools on various devices, ensuring that the layout remained structurally sound across different screen dimensions.
+
+
 ## Manual Testing
 
 ### Homepage
@@ -822,3 +839,11 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
 | Verify My Reservations Page Load       | 1. Open the My Reservations page.<br>2. Check page content. | My Reservations page loads correctly and displays reservations. |        |
 | Check Reservation Details              | 1. Open reservation details.<br>2. Verify displayed information. | Reservation details are correct and complete. |        |
 | Verify No Reservations Message         | 1. Open My Reservations with no reservations.<br>2. Check message displayed. | Appropriate message is shown for no reservations. |        |
+
+
+## Bugs
+
+### Fixed Bugs
+- Fixed errors not displayed upon user registration.
+- Fixed an error where placeholder was placed on unsupported HTML elements.
+- Fixed an error where aria-label was misplaced.
