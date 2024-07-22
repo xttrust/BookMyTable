@@ -665,62 +665,42 @@ This section provides a comprehensive view of how the contact form operates, fro
 ### Lighthouse
 Lighthouse is an open-source tool for improving the quality of web pages. It provides insights into performance, accessibility, best practices, and SEO. Below are the results from Lighthouse tests for various pages and devices.
 
-- **Homepage**
-
 <details><summary>Homepage Desktop</summary>
     <img src="./docs/images/tests/lighthouse/homepage-desktop.png" alt="Homepage Desktop">
 </details>
 <details><summary>Homepage Mobile</summary>
     <img src="./docs/images/tests/lighthouse/homepage-mobile.png" alt="Homepage Mobile">
 </details>
-
-- **Contact**
-
 <details><summary>Contact Desktop</summary>
     <img src="./docs/images/tests/lighthouse/contact-desktop.png" alt="Contact Desktop">
 </details>
 <details><summary>Contact Mobile</summary>
     <img src="./docs/images/tests/lighthouse/contact-mobile.png" alt="Contact Mobile">
 </details>
-
-- **Menu**
-
 <details><summary>Menu Desktop</summary>
     <img src="./docs/images/tests/lighthouse/menu-desktop.png" alt="Menu Desktop">
 </details>
 <details><summary>Menu Mobile</summary>
     <img src="./docs/images/tests/lighthouse/menu-mobile.png" alt="Menu Mobile">
 </details>
-
-- **Login**
-
 <details><summary>Login Desktop</summary>
     <img src="./docs/images/tests/lighthouse/login-desktop.png" alt="Login Desktop">
 </details>
 <details><summary>Login Mobile</summary>
     <img src="./docs/images/tests/lighthouse/login-mobile.png" alt="Login Mobile">
 </details>
-
-- **Register**
-
 <details><summary>Register Desktop</summary>
     <img src="./docs/images/tests/lighthouse/register-desktop.png" alt="Register Desktop">
 </details>
 <details><summary>Register Mobile</summary>
     <img src="./docs/images/tests/lighthouse/register-mobile.png" alt="Register Mobile">
 </details>
-
-- **Reserve Table**
-
 <details><summary>Reserve Table Desktop</summary>
     <img src="./docs/images/tests/lighthouse/reserve-table-desktop.png" alt="Reserve Table Desktop">
 </details>
 <details><summary>Reserve Table Mobile</summary>
     <img src="./docs/images/tests/lighthouse/reserve-table-mobile.png" alt="Reserve Table Mobile">
 </details>
-
-- **My Reservations**
-
 <details><summary>My Reservations Desktop</summary>
     <img src="./docs/images/tests/lighthouse/my-reservations-desktop.png" alt="My Reservations Desktop">
 </details>
@@ -728,6 +708,40 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
     <img src="./docs/images/tests/lighthouse/my-reservations-mobile.png" alt="My Reservations Mobile">
 </details>
 
+## Code Validation
+
+### HTML
+
+<details><summary>Homepage</summary>
+    <img src="./docs/images/tests/w3-html/homepage.png" alt="HTML homepage test results">
+</details>
+<details><summary>Contact</summary>
+    <img src="./docs/images/tests/w3-html/contact.png" alt="HTML Contact test results">
+</details>
+<details><summary>Login</summary>
+    <img src="./docs/images/tests/w3-html/login.png" alt="HTML Login test results">
+</details>
+<details><summary>Logout</summary>
+    <img src="./docs/images/tests/w3-html/logout.png" alt="HTML Logout test results">
+</details>
+<details><summary>Register</summary>
+    <img src="./docs/images/tests/w3-html/register.png" alt="HTML Register test results">
+</details>
+<details><summary>Menu</summary>
+    <img src="./docs/images/tests/w3-html/menu.png" alt="HTML Menu test results">
+</details>
+<details><summary>My Reservations</summary>
+    <img src="./docs/images/tests/w3-html/my-reservations.png" alt="HTML My Reservations test results">
+</details>
+<details><summary>Reserve Table</summary>
+    <img src="./docs/images/tests/w3-html/reserve-table.png" alt="HTML Reserve Table test results">
+</details>
+
+### CSS
+
+<details><summary>style.css</summary>
+    <img src="./docs/images/tests/w3-css/style.png" alt="style.css test results">
+</details>
 
 ## Manual Testing
 
