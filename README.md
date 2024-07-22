@@ -1,33 +1,20 @@
-
-  
-
 # BookMyTable - PP4
-
-  
 
 **BookMyTable** is a web application designed to streamline the restaurant reservation process and menu management. This project, developed by [Florin Pinta (xttrust)](https://github.com/xttrust), serves as a comprehensive solution for both diners and restaurant staff, offering an intuitive platform to handle reservations and menu items efficiently.
 
-  
 
 Explore the live application at [BookMyTable Deployed Site](https://bookmytable-8de20a7bca65.herokuapp.com/).
 
-  
+
 
 ![BookMyTable Image](./docs/images/header.jpg)
 
   
-
 ## User Experience
-
-  
 
 ### User Stories
 
-  
-
 #### New User
-
-  
 
 1. As a user, I can **register for an account** so that I can make and manage reservations. [#6](https://github.com/xttrust/BookMyTable/issues/6)
 
@@ -41,19 +28,11 @@ Explore the live application at [BookMyTable Deployed Site](https://bookmytable-
 
 6. As a user, I can **see a booking confirmation on the website** so that I have proof of my reservation. [#17](https://github.com/xttrust/BookMyTable/issues/17)
 
-  
-
 #### Existing User
-
-  
 
 1. As an existing user, I can **view and manage my reservations** so that I can keep track of my dining plans. [#12](https://github.com/xttrust/BookMyTable/issues/12)
 
-  
-
 #### Admin
-
-  
 
 1. As an admin, I can **view and manage all bookings** so that I can ensure smooth operations and resolve any issues promptly. [#14](https://github.com/xttrust/BookMyTable/issues/14)
 
@@ -61,23 +40,15 @@ Explore the live application at [BookMyTable Deployed Site](https://bookmytable-
 
 3. As an admin, I can **manage menu categories** so that I can organize the restaurant’s menu effectively. [#22](https://github.com/xttrust/BookMyTable/issues/22)
 
-5. As an admin, I can **display formatted descriptions in the admin list view** so that information is presented clearly. [#24](https://github.com/xttrust/BookMyTable/issues/24)
-
-  
+5. As an admin, I can **display formatted descriptions in the admin list view** so that information is presented clearly. [#24](https://github.com/xttrust/BookMyTable/issues/24) 
 
 #### Testing and Documentation
-
-  
 
 1. As a developer, I can **write tests** to ensure the application functions as expected. [#20](https://github.com/xttrust/BookMyTable/issues/20)
 
 2. As a developer, I can **write documentation** so that users and developers understand how to use and contribute to the project. [#21](https://github.com/xttrust/BookMyTable/issues/21)
 
-  
-
 ### Site Goals
-
-  
 
 1.  **Simplify the Restaurant Reservation Process**: Provide an intuitive and efficient platform for users to book and manage restaurant reservations effortlessly.
 
@@ -91,15 +62,9 @@ Explore the live application at [BookMyTable Deployed Site](https://bookmytable-
 
 6.  **Ensure Scalability and Performance**: Develop a scalable platform that can handle varying levels of traffic and user activity without compromising performance.
 
-  
-
 ## Scope
 
-  
-
 The **BookMyTable** application aims to provide a streamlined and efficient platform for restaurant reservations and menu management. The scope of the project includes:
-
-  
 
 1.  **User Account Management**: Enabling users to register, log in, and manage their profiles.
 
@@ -113,27 +78,23 @@ The **BookMyTable** application aims to provide a streamlined and efficient plat
 
 6.  **Testing and Documentation**: Ensuring comprehensive testing and providing clear documentation for developers and users.
 
-  
 
 ## Epics
 
-  
 
 <details>
 
 <summary>Epic 1: User Account Management</summary>
 
-  
 
 -  **User Registration**: As a user, I want to register for an account to manage reservations. [#6](https://github.com/xttrust/BookMyTable/issues/6)
 
 -  **User Login**: As a user, I want to log into my account to access my reservations. [#7](https://github.com/xttrust/BookMyTable/issues/7)
 
-  
 
 </details>
 
-  
+
 
 <details>
 
@@ -634,8 +595,22 @@ This section provides a comprehensive view of how the contact form operates, fro
 ### Technologies Used
 
 - [Bootstrap](https://getbootstrap.com/) was used to quickly layout the responsive structure of the website
-- [Chat-GPT](https://chat.openai.com/) was used to create all written content and copy of the website
+- [Chat-GPT](https://chat.openai.com/) was used to create all written content of the website
 - [GitPod Version of CI (VS Code)](https://codeinstitute-ide.net/) I used CodeInstitute ide to build this website
+- [moqups - Wireframe](https://app.moqups.com/) was used to create wireframes
+- [Favicon Generator](https://favicon.io/favicon-converter/) was used to generate the Favicon
+- [Font Awesome](https://fontawesome.com/) was used for all icons on the website
+- [GitHub](https://github.com/) is the hosting site used to store the code for the website.
+- [Google Fonts](https://fonts.google.com/) was used to import fonts.
+- [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) was used for scoring the website during the testing phase
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/) was used during testing, debugging and making the website responsive.
+- [W3C HTML Validator](https://validator.w3.org/) was used to check for errors in the HTML code.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to check for errors in the CSS code
+- [CI Python Pep8 Checker](https://pep8ci.herokuapp.com/) was used to validate the Python code.
+- [Cloudinary](https://cloudinary.com/) was used to store static files and images.
+- [DBDiagram](https://dbdiagram.io/) was used to visually create the database structure and schemas
+- [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/) was the database hosting provider
+- [Heroku](https://heroku.com/) was the hosting provider used.
 
 ### Languages Used
 
@@ -847,3 +822,137 @@ The website was tested on a variety of devices, including Desktop, and Samsung S
 - Fixed errors not displayed upon user registration.
 - Fixed an error where placeholder was placed on unsupported HTML elements.
 - Fixed an error where aria-label was misplaced.
+
+
+## Deployment
+
+### Pre-Deployment Checklist
+
+To ensure a smooth deployment of the application on Heroku, follow these steps:
+
+1. **Update `requirements.txt`:**
+   - Keep the `requirements.txt` file current to ensure all necessary Python modules are included and correctly configured. This file lists all the dependencies your project needs to run.
+
+2. **Create a `Procfile`:**
+   - A `Procfile` is essential for Heroku deployment. It should be set up to configure a Gunicorn web server for your application. An example entry in the `Procfile` might look like:
+     ```
+     web: gunicorn app_name.wsgi
+     ```
+
+3. **Configure `settings.py`:**
+   - In `settings.py`, update the `ALLOWED_HOSTS` list with your Heroku app's domain and `localhost`. For example:
+     ```python
+     ALLOWED_HOSTS = ['.herokuapp.com', 'localhost']
+     ```
+   - Ensure that all static files and directories are properly configured.
+
+4. **Set Environment Variables:**
+   - Configure all necessary environment variables in your `env.py` file, which should be included in your `.gitignore` file to keep sensitive information secure. Make sure the following variables are set:
+     - `SECRET_KEY`
+     - `DATABASE_URL`
+     - `CLOUDINARY_URL`
+
+   Example `env.py`:
+   ```python
+   import os
+
+   os.environ['SECRET_KEY'] = 'your-secret-key'
+   os.environ['DATABASE_URL'] = 'your-database-url'
+   os.environ['CLOUDINARY_URL'] = 'your-cloudinary-url'
+
+
+## Deployment
+
+### Deploying on Heroku
+
+1. **Create a Heroku Account:**
+   - If you don't already have one, sign up for a Heroku account.
+   - Optionally, sign up with a student account for additional credits.
+
+2. **Create a New Heroku App:**
+   - Once logged in, click on "Create New App".
+   - Choose a unique app name and select the appropriate region.
+
+3. **Set Deployment Method:**
+   - Select "Connect to GitHub" as the deployment method.
+   - Search for the desired repository, for example, `BookMyTable`.
+   - Enable automatic deploys and select the `main` branch.
+
+4. **Configure Environment Variables:**
+   - In the app's settings tab, click on "Reveal Config Vars".
+   - Input the required hidden variables such as `SECRET_KEY`, `DATABASE_URL`, and `CLOUDINARY_URL`.
+
+5. **Set Buildpacks:**
+   - In the settings tab, add `python` as buildpacks.
+
+6. **Deploy the App:**
+   - Navigate to the "Deploy" tab and click "Deploy Branch".
+
+### Forking the Repository
+
+1. **Go to the GitHub Repository:**
+   - Navigate to the repository you want to fork.
+
+2. **Fork the Repository:**
+   - Click the "Fork" button in the upper right-hand corner.
+   - Optionally, edit the repository name and description.
+   - Click the green "Create Fork" button.
+
+### Cloning the Repository
+
+1. **Go to the GitHub Repository:**
+   - Navigate to the repository you want to clone.
+
+2. **Clone the Repository:**
+   - Click the green "Code" button above the list of files.
+   - Choose to clone using HTTPS, SSH, or GitHub CLI, and copy the URL.
+   - Open Git Bash and navigate to the desired directory.
+   - Type `git clone` and paste the URL, e.g., `$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`.
+   - Press Enter to create your local clone.
+
+### Running the Repository Locally
+
+1. **Download the Repository:**
+   - Navigate to the GitHub repository.
+   - Click the green "Code" button and select "Download ZIP".
+   - Extract the downloaded ZIP file.
+
+2. **Set Up Environment Variables:**
+   - Create an `env.py` file in your project directory.
+   - Input the necessary environment variables, such as `SECRET_KEY`, `DATABASE_URL`, and `CLOUDINARY_URL`.
+
+3. **Install PostgreSQL:**
+   - Ensure [PostgreSQL](https://www.postgresql.org/) is installed and running on your machine.
+
+4. **Create a Virtual Environment:**
+   - Create a virtual environment to install the required Python modules.
+   - Activate the virtual environment and install the dependencies listed in the `requirements.txt` file.
+
+5. **Run Database Migrations:**
+   - Run `python manage.py makemigrations` and `python manage.py migrate` to apply database migrations.
+
+6. **Run the Development Server:**
+   - Start the development server using `python manage.py runserver`.
+   - Open your web browser and navigate to `http://localhost:8000` to view the application.
+
+
+## Credits
+
+### Content
+
+- All recipes were created using [ChatGPT](https://www.openai.com/chatgpt) to facilitate speed and efficiency.
+
+### Media
+
+- All images were sourced from [Unsplash](https://www.unsplash.com), a platform for freely usable images.
+
+### Code
+
+- Credit to [Bootstrap](https://getbootstrap.com/) for providing the core HTML and CSS framework.
+- Credit to [CodeInstitute](https://codeinstitute.net/) for the "I Think Therefore I Blog" project, which served as an inspiration.
+
+### Acknowledgements
+
+- A heartfelt thank you to the [Django](https://www.djangoproject.com/) community for their comprehensive documentation and support.
+- Special thanks to my friends and family for their constant encouragement and feedback throughout the development process.
+- Gratitude to [Heroku](https://www.heroku.com/) for their reliable hosting service.
