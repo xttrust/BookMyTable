@@ -13,8 +13,8 @@ class ReservationForm(forms.ModelForm):
             'full_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Full Name'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
             'phone': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone Number'}),
-            'reservation_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date', 'placeholder': 'Reservation Date'}),
-            'reservation_time': forms.TimeInput(attrs={'class': 'form-control', 'type': 'time', 'placeholder': 'Reservation Time'}),
+            'reservation_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'reservation_time': forms.TimeInput(attrs={'class': 'form-control', 'type': 'time'}),
             'number_of_people': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Number of People'}),
             'special_requests': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Special Requests'}),
             'table': forms.Select(attrs={'class': 'form-control'})
