@@ -9,6 +9,40 @@ Explore the live application at [BookMyTable Deployed Site](https://bookmytable-
 
 ![BookMyTable Image](./docs/images/header.jpg)
 
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+   - [Technologies Used](#technologies-used)
+   - [Languages Used](#languages-used)
+   - [Python Modules Imported](#python-modules-imported)
+4. [Testing](#testing)
+   - [Lighthouse](#lighthouse)
+   - [Code Validation](#code-validation)
+     - [HTML](#html)
+     - [CSS](#css)
+     - [Python](#python)
+   - [Unit test - automated](#unit-test---automated)
+   - [Browser Testing](#browser-testing)
+   - [Device Testing](#device-testing)
+   - [Manual Testing](#manual-testing)
+5. [Bugs](#bugs)
+   - [Fixed Bugs](#fixed-bugs)
+6. [Deployment](#deployment)
+   - [Pre-Deployment Checklist](#pre-deployment-checklist)
+   - [Deploying on Heroku](#deploying-on-heroku)
+   - [Forking the Repository](#forking-the-repository)
+   - [Cloning the Repository](#cloning-the-repository)
+   - [Running the Repository Locally](#running-the-repository-locally)
+7. [Credits](#credits)
+   - [Content](#content)
+   - [Media](#media)
+   - [Code](#code)
+8. [Acknowledgements](#acknowledgements)
+
+
   
 ## User Experience
 
@@ -172,8 +206,6 @@ The **BookMyTable** application aims to provide a streamlined and efficient plat
 
 </details>
 
-  
-  
   
 
 ## Design
