@@ -744,6 +744,18 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
     <img src="./docs/images/tests/pep8/pages-views.png" alt="Pages Views test results">
 </details>
 
+## Unit test - automated
+
+<details><summary>Menu Model Unit Test</summary>
+    <img src="./docs/images/tests/unit/menu-model.png" alt="Menu Model Unit Test test results">
+</details>
+<details><summary>Table Model Unit Test</summary>
+    <img src="./docs/images/tests/unit/table-model.png" alt="Table Model Unit Test test results">
+</details>
+<details><summary>Pages View Unit Test</summary>
+    <img src="./docs/images/tests/unit/pages-view.png" alt="Pages View Unit Test test results">
+</details>
+
 ## Browser Testing
 
 The Website was tested on Google Chrome, Firefox, Safari browsers with no issues noted.
