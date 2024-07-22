@@ -628,3 +628,165 @@ This section provides a user-friendly interface for booking a table on **BookMyT
 - **Validation Feedback**: HTML5 provides instant feedback on invalid fields. For example, if a user tries to submit the form with an invalid email address or missing required fields, the browser will display a default error message.
 
 This section provides a comprehensive view of how the contact form operates, from user interaction to server-side processing.
+
+### Languages Used
+
+- **HTML (HyperText Markup Language)**
+- **CSS (Cascading Style Sheets)**
+- **JavaScript**
+- **Python**
+- **SQL (Structured Query Language)**
+- **Django Template Language**
+
+### Python Modules Imported
+
+[Django](https://pypi.org/project/Django/) is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It is used for building web applications with Django's powerful features.
+
+[Cloudinary Storage](https://pypi.org/project/cloudinary-storage/) is a Django storage backend for integrating Cloudinary, a cloud-based media management platform, with Django projects. It helps manage and serve media files.
+
+[django-allauth](https://pypi.org/project/django-allauth/) is an authentication and account management package for Django, providing user registration, authentication, account management, and social account integration.
+
+[dj-database-url](https://pypi.org/project/dj-database-url/) is used to parse the database URL specified in the DATABASE_URL environment variable, commonly used for configuring database connections in Django projects.
+
+[Gunicorn](https://pypi.org/project/gunicorn/) is a popular WSGI HTTP server for running Python web applications, including Django applications, in a production environment.
+
+[Psycopg2](https://pypi.org/project/psycopg2/) is a PostgreSQL adapter for Python. It allows Django to connect to PostgreSQL databases.
+
+[Django Summernote](https://pypi.org/project/django-summernote/) is a rich text editor and WYSIWYG plugin for Django that simplifies the process of incorporating and editing formatted content within web applications.
+
+[Django Crispy Forms](https://pypi.org/project/django-crispy-forms/) is a Django application that enhances the presentation and customization of Django forms, making it easier to create aesthetically pleasing and responsive forms for web applications.
+
+[dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) is a Django storage backend that simplifies the integration of Cloudinary with Django, allowing for seamless and efficient storage and retrieval of media and static files in web applications.
+
+[Cloudinary](https://pypi.org/project/cloudinary/1.27.0/) is a cloud-based media management platform that offers tools and services for storing, optimizing, transforming, and delivering images, videos, and other media assets.
+
+## Testing
+
+### Lighthouse
+Lighthouse is an open-source tool for improving the quality of web pages. It provides insights into performance, accessibility, best practices, and SEO. Below are the results from Lighthouse tests for various pages and devices.
+
+- **Homepage**
+
+<details><summary>Homepage Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/homepage-desktop.png" alt="Homepage Desktop">
+</details>
+<details><summary>Homepage Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/homepage-mobile.png" alt="Homepage Mobile">
+</details>
+
+- **Contact**
+
+<details><summary>Contact Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/contact-desktop.png" alt="Contact Desktop">
+</details>
+<details><summary>Contact Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/contact-mobile.png" alt="Contact Mobile">
+</details>
+
+- **Menu**
+
+<details><summary>Menu Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/menu-desktop.png" alt="Menu Desktop">
+</details>
+<details><summary>Menu Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/menu-mobile.png" alt="Menu Mobile">
+</details>
+
+- **Login**
+
+<details><summary>Login Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/login-desktop.png" alt="Login Desktop">
+</details>
+<details><summary>Login Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/login-mobile.png" alt="Login Mobile">
+</details>
+
+- **Register**
+
+<details><summary>Register Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/register-desktop.png" alt="Register Desktop">
+</details>
+<details><summary>Register Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/register-mobile.png" alt="Register Mobile">
+</details>
+
+- **Reserve Table**
+
+<details><summary>Reserve Table Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/reserve-table-desktop.png" alt="Reserve Table Desktop">
+</details>
+<details><summary>Reserve Table Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/reserve-table-mobile.png" alt="Reserve Table Mobile">
+</details>
+
+- **My Reservations**
+
+<details><summary>My Reservations Desktop</summary>
+    <img src="./docs/images/tests/lighthouse/my-reservations-desktop.png" alt="My Reservations Desktop">
+</details>
+<details><summary>My Reservations Mobile</summary>
+    <img src="./docs/images/tests/lighthouse/my-reservations-mobile.png" alt="My Reservations Mobile">
+</details>
+
+
+## Manual Testing
+
+### Homepage
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify Homepage Load                   | 1. Open the homepage URL.<br>2. Check page content.     | Homepage loads correctly with all sections displayed. |        |
+| Check Navigation Links                 | 1. Click on navigation links.<br>2. Verify redirection. | Links redirect to the correct pages.       |        |
+| Test Responsive Design                 | 1. Resize the browser window.<br>2. Verify layout changes. | Layout adjusts correctly for different screen sizes. |        |
+
+### Contact Form
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify Contact Form Fields             | 1. Open the Contact page.<br>2. Check the presence of form fields (Name, Email, Subject, Message). | All fields are present and correctly labeled. |        |
+| Submit Contact Form with Valid Data    | 1. Fill in the form with valid data.<br>2. Submit the form. | Form submission is successful, confirmation message is shown. |        |
+| Submit Contact Form with Invalid Data  | 1. Fill in the form with invalid data.<br>2. Submit the form. | Appropriate error messages are displayed.   |        |
+| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |        |
+
+### Menu
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify Menu Categories                 | 1. Open the Menu page.<br>2. Check for menu categories. | Categories are displayed as expected.       |        |
+| Test Menu Item Display                 | 1. Select a menu category.<br>2. Verify menu items.     | Menu items are displayed with correct details (name, description, price). |        |
+| Check Image Display                    | 1. Open menu items.<br>2. Verify images.                | Images are displayed correctly for each menu item. |        |
+| Test Pagination                        | 1. Navigate through paginated menu items.<br>2. Verify page navigation. | Pagination works and correctly displays items. |        |
+
+### Login
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify Login Page Load                 | 1. Open the Login page.<br>2. Check page content.       | Login page loads correctly with fields.     |        |
+| Submit Login with Valid Credentials    | 1. Enter valid login credentials.<br>2. Submit the form. | User is logged in and redirected correctly. |        |
+| Submit Login with Invalid Credentials  | 1. Enter invalid login credentials.<br>2. Submit the form. | Error message is displayed for invalid credentials. |        |
+
+### Register
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify Registration Page Load          | 1. Open the Registration page.<br>2. Check page content. | Registration page loads correctly with fields. |        |
+| Submit Registration with Valid Data    | 1. Fill in the registration form with valid data.<br>2. Submit the form. | User is registered and redirected to login or home page. |        |
+| Submit Registration with Invalid Data  | 1. Fill in the registration form with invalid data.<br>2. Submit the form. | Error messages are displayed for invalid data. |        |
+| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |        |
+
+### Reserve Table
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify Reserve Table Page Load         | 1. Open the Reserve Table page.<br>2. Check page content. | Reserve Table page loads correctly with fields. |        |
+| Submit Reservation with Valid Data     | 1. Fill in reservation details.<br>2. Submit the form.   | Reservation is successful and confirmation is shown. |        |
+| Submit Reservation with Invalid Data   | 1. Fill in reservation details with errors.<br>2. Submit the form. | Appropriate error messages are displayed. |        |
+| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |        |
+
+### My Reservations
+
+| Test Case                             | Steps                                                    | Expected Result                             | Status |
+|---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
+| Verify My Reservations Page Load       | 1. Open the My Reservations page.<br>2. Check page content. | My Reservations page loads correctly and displays reservations. |        |
+| Check Reservation Details              | 1. Open reservation details.<br>2. Verify displayed information. | Reservation details are correct and complete. |        |
+| Verify No Reservations Message         | 1. Open My Reservations with no reservations.<br>2. Check message displayed. | Appropriate message is shown for no reservations. |        |
