@@ -759,61 +759,61 @@ The website was tested on a variety of devices, including Desktop, and Samsung S
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify Homepage Load                   | 1. Open the homepage URL.<br>2. Check page content.     | Homepage loads correctly with all sections displayed. |        |
-| Check Navigation Links                 | 1. Click on navigation links.<br>2. Verify redirection. | Links redirect to the correct pages.       |        |
-| Test Responsive Design                 | 1. Resize the browser window.<br>2. Verify layout changes. | Layout adjusts correctly for different screen sizes. |        |
+| Verify Homepage Load                   | 1. Open the homepage URL.<br>2. Check page content.     | Homepage loads correctly with all sections displayed. |    PASS    |
+| Check Navigation Links                 | 1. Click on navigation links.<br>2. Verify redirection. | Links redirect to the correct pages.       |    PASS    |
+| Test Responsive Design                 | 1. Resize the browser window.<br>2. Verify layout changes. | Layout adjusts correctly for different screen sizes. |    PASS    |
 
 ### Contact Form
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify Contact Form Fields             | 1. Open the Contact page.<br>2. Check the presence of form fields (Name, Email, Subject, Message). | All fields are present and correctly labeled. |        |
-| Submit Contact Form with Valid Data    | 1. Fill in the form with valid data.<br>2. Submit the form. | Form submission is successful, confirmation message is shown. |        |
-| Submit Contact Form with Invalid Data  | 1. Fill in the form with invalid data.<br>2. Submit the form. | Appropriate error messages are displayed.   |        |
-| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |        |
+| Verify Contact Form Fields             | 1. Open the Contact page.<br>2. Check the presence of form fields (Name, Email, Subject, Message). | All fields are present and correctly labeled. |   PASS     |
+| Submit Contact Form with Valid Data    | 1. Fill in the form with valid data.<br>2. Submit the form. | Form submission is successful, confirmation message is shown. |    PASS    |
+| Submit Contact Form with Invalid Data  | 1. Fill in the form with invalid data.<br>2. Submit the form. | Appropriate error messages are displayed.   |    PASS    |
+| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |   PASS     |
 
 ### Menu
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify Menu Categories                 | 1. Open the Menu page.<br>2. Check for menu categories. | Categories are displayed as expected.       |        |
-| Test Menu Item Display                 | 1. Select a menu category.<br>2. Verify menu items.     | Menu items are displayed with correct details (name, description, price). |        |
-| Check Image Display                    | 1. Open menu items.<br>2. Verify images.                | Images are displayed correctly for each menu item. |        |
-| Test Pagination                        | 1. Navigate through paginated menu items.<br>2. Verify page navigation. | Pagination works and correctly displays items. |        |
+| Verify Menu Categories                 | 1. Open the Menu page.<br>2. Check for menu categories. | Categories are displayed as expected.       |    PASS    |
+| Test Menu Item Display                 | 1. Select a menu category.<br>2. Verify menu items.     | Menu items are displayed with correct details (name, description, price). |   PASS     |
+| Check Image Display                    | 1. Open menu items.<br>2. Verify images.                | Images are displayed correctly for each menu item. |    PASS    |
+| Test Pagination                        | 1. Navigate through paginated menu items.<br>2. Verify page navigation. | Pagination works and correctly displays items. |    PASS    |
 
 ### Login
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify Login Page Load                 | 1. Open the Login page.<br>2. Check page content.       | Login page loads correctly with fields.     |        |
-| Submit Login with Valid Credentials    | 1. Enter valid login credentials.<br>2. Submit the form. | User is logged in and redirected correctly. |        |
-| Submit Login with Invalid Credentials  | 1. Enter invalid login credentials.<br>2. Submit the form. | Error message is displayed for invalid credentials. |        |
+| Verify Login Page Load                 | 1. Open the Login page.<br>2. Check page content.       | Login page loads correctly with fields.     |   PASS     |
+| Submit Login with Valid Credentials    | 1. Enter valid login credentials.<br>2. Submit the form. | User is logged in and redirected correctly. |    PASS    |
+| Submit Login with Invalid Credentials  | 1. Enter invalid login credentials.<br>2. Submit the form. | Error message is displayed for invalid credentials. |    PASS    |
 
 ### Register
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify Registration Page Load          | 1. Open the Registration page.<br>2. Check page content. | Registration page loads correctly with fields. |        |
-| Submit Registration with Valid Data    | 1. Fill in the registration form with valid data.<br>2. Submit the form. | User is registered and redirected to login or home page. |        |
-| Submit Registration with Invalid Data  | 1. Fill in the registration form with invalid data.<br>2. Submit the form. | Error messages are displayed for invalid data. |        |
-| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |        |
+| Verify Registration Page Load          | 1. Open the Registration page.<br>2. Check page content. | Registration page loads correctly with fields. |   PASS     |
+| Submit Registration with Valid Data    | 1. Fill in the registration form with valid data.<br>2. Submit the form. | User is registered and redirected to login or home page. |    PASS    |
+| Submit Registration with Invalid Data  | 1. Fill in the registration form with invalid data.<br>2. Submit the form. | Error messages are displayed for invalid data. |    PASS    |
+| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |   PASS     |
 
 ### Reserve Table
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify Reserve Table Page Load         | 1. Open the Reserve Table page.<br>2. Check page content. | Reserve Table page loads correctly with fields. |        |
-| Submit Reservation with Valid Data     | 1. Fill in reservation details.<br>2. Submit the form.   | Reservation is successful and confirmation is shown. |        |
-| Submit Reservation with Invalid Data   | 1. Fill in reservation details with errors.<br>2. Submit the form. | Appropriate error messages are displayed. |        |
-| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |        |
+| Verify Reserve Table Page Load         | 1. Open the Reserve Table page.<br>2. Check page content. | Reserve Table page loads correctly with fields. |    PASS    |
+| Submit Reservation with Valid Data     | 1. Fill in reservation details.<br>2. Submit the form.   | Reservation is successful and confirmation is shown. |    PASS    |
+| Submit Reservation with Invalid Data   | 1. Fill in reservation details with errors.<br>2. Submit the form. | Appropriate error messages are displayed. |    PASS    |
+| Verify Required Fields Validation      | 1. Leave required fields empty.<br>2. Attempt to submit the form. | Validation errors are shown for missing required fields. |   PASS     |
 
 ### My Reservations
 
 | Test Case                             | Steps                                                    | Expected Result                             | Status |
 |---------------------------------------|----------------------------------------------------------|---------------------------------------------|--------|
-| Verify My Reservations Page Load       | 1. Open the My Reservations page.<br>2. Check page content. | My Reservations page loads correctly and displays reservations. |        |
-| Check Reservation Details              | 1. Open reservation details.<br>2. Verify displayed information. | Reservation details are correct and complete. |        |
-| Verify No Reservations Message         | 1. Open My Reservations with no reservations.<br>2. Check message displayed. | Appropriate message is shown for no reservations. |        |
+| Verify My Reservations Page Load       | 1. Open the My Reservations page.<br>2. Check page content. | My Reservations page loads correctly and displays reservations. |   PASS     |
+| Check Reservation Details              | 1. Open reservation details.<br>2. Verify displayed information. | Reservation details are correct and complete. |    PASS    |
+| Verify No Reservations Message         | 1. Open My Reservations with no reservations.<br>2. Check message displayed. | Appropriate message is shown for no reservations. |    PASS    |
 
 
 ## Bugs
