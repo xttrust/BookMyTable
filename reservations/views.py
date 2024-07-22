@@ -9,16 +9,32 @@ from datetime import datetime, time as dt_time
 # Define the restaurant's capacity
 RESTAURANT_CAPACITY = 60
 
-# Define the restaurant's capacity
-RESTAURANT_CAPACITY = 60
-
 @login_required
 def reservation_list(request):
+    """
+    View to list all reservations made by the logged-in user.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template displaying the user's reservations.
+    """
     reservations = Reservation.objects.filter(user=request.user) 
     return render(request, 'reservations/reservation_list.html', {'reservations': reservations})
 
 @login_required
 def reserve_table(request):
+    """
+    View to handle table reservations.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template for the reservation form or redirects
+        to the success page upon successful reservation.
+    """
     if request.method == 'POST':
         form = ReservationForm(request.POST)
         
@@ -96,10 +112,31 @@ def reserve_table(request):
     return render(request, 'reservations/reserve_table.html', {'form': form})
 
 def reservation_success(request):
+    """
+    View to display a success message after a successful reservation.
+
+    Args:
+        request: The HTTP request object.
+
+    Returns:
+        Rendered HTML template showing the success message.
+    """
     return render(request, 'reservations/reservation_success.html')
 
 @login_required
 def edit_reservation(request, pk):
+    """
+    View to handle editing an existing reservation.
+
+    Args:
+        request: The HTTP request object.
+        pk: The primary key of the reservation to be edited.
+
+    Returns:
+        Rendered HTML template for the reservation form with
+        existing data or redirects to the reservation list upon
+        successful edit.
+    """
     reservation = get_object_or_404(Reservation, pk=pk)
     if request.method == 'POST':
         form = ReservationForm(request.POST, instance=reservation)
@@ -114,6 +151,17 @@ def edit_reservation(request, pk):
 
 @login_required
 def delete_reservation(request, pk):
+    """
+    View to handle deleting a reservation.
+
+    Args:
+        request: The HTTP request object.
+        pk: The primary key of the reservation to be deleted.
+
+    Returns:
+        Rendered HTML template for confirmation of deletion or
+        redirects to the reservation list upon successful deletion.
+    """
     reservation = get_object_or_404(Reservation, pk=pk)
     if request.method == 'POST':
         reservation.delete()

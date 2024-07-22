@@ -2,11 +2,13 @@ from django.db import models
 from django_summernote.fields import SummernoteTextField
 from cloudinary.models import CloudinaryField
 
+
 class MenuCategory(models.Model):
     name = models.CharField(max_length=100)
     
     def __str__(self):
         return self.name
+
 
 class MenuItem(models.Model):
     category = models.ForeignKey(MenuCategory, on_delete=models.CASCADE)
