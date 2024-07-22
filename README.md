@@ -743,6 +743,24 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
     <img src="./docs/images/tests/w3-css/style.png" alt="style.css test results">
 </details>
 
+### Python
+
+<details><summary>Contact Forms</summary>
+    <img src="./docs/images/tests/pep8/contact-forms.png" alt="Contact Forms test results">
+</details>
+<details><summary>Contact Models</summary>
+    <img src="./docs/images/tests/pep8/contact-models.png" alt="Contact Models test results">
+</details>
+<details><summary>Contact Views</summary>
+    <img src="./docs/images/tests/pep8/contact-views.png" alt="Contact Views test results">
+</details>
+<details><summary>Menu Views</summary>
+    <img src="./docs/images/tests/pep8/menu-views.png" alt="Menu Views test results">
+</details>
+<details><summary>Pages Views</summary>
+    <img src="./docs/images/tests/pep8/pages-views.png" alt="Pages Views test results">
+</details>
+
 ## Manual Testing
 
 ### Homepage
